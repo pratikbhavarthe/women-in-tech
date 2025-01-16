@@ -27,7 +27,6 @@ interface TextAnimateProps extends MotionProps {
   as?: ElementType;
   by?: AnimationType;
   startOnView?: boolean;
-  once?: boolean;
   animation?: AnimationVariant;
 }
 
@@ -65,7 +64,6 @@ const defaultItemVariants: Variants = {
   },
 };
 
-// Animation variants for the text segments
 const defaultItemAnimationVariants: Record<
   AnimationVariant,
   { container: Variants; item: Variants }
@@ -91,40 +89,40 @@ const defaultItemAnimationVariants: Record<
   },
   blurIn: {
     container: {},
-    item: {}
+    item: {},
   },
   blurInUp: {
     container: {},
-    item: {}
+    item: {},
   },
   blurInDown: {
     container: {},
-    item: {}
+    item: {},
   },
   slideUp: {
     container: {},
-    item: {}
+    item: {},
   },
   slideDown: {
     container: {},
-    item: {}
+    item: {},
   },
   slideLeft: {
     container: {},
-    item: {}
+    item: {},
   },
   slideRight: {
     container: {},
-    item: {}
+    item: {},
   },
   scaleUp: {
     container: {},
-    item: {}
+    item: {},
   },
   scaleDown: {
     container: {},
-    item: {}
-  }
+    item: {},
+  },
 };
 
 export function TextAnimate({
@@ -136,14 +134,12 @@ export function TextAnimate({
   segmentClassName,
   as: Component = "p",
   startOnView = true,
-  once = false,
   by = "word",
   animation = "fadeIn",
   ...props
 }: TextAnimateProps) {
   const MotionComponent = motion.create(Component);
 
-  // Using default or passed animation variants
   const finalVariants = animation
     ? {
         container: {
@@ -201,7 +197,7 @@ export function TextAnimate({
             custom={i * staggerTimings[by]}
             className={cn(
               by === "line" ? "block" : "inline-block whitespace-pre",
-              segmentClassName,
+              segmentClassName
             )}
           >
             {segment}
