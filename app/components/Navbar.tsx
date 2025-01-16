@@ -1,16 +1,16 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { HiOutlineMenuAlt3 } from "react-icons/hi"; // Importing a modern hamburger icon
-import { IoClose } from "react-icons/io5"; // Importing a close icon for the drawer
-import { motion } from "framer-motion";
+import { HiOutlineMenuAlt3 } from "react-icons/hi"; // Hamburger icon
+import { IoClose } from "react-icons/io5"; // Close icon
+import { motion } from "framer-motion"; // Motion for animations
 
 const Navbar: React.FC = () => {
-  const [menuOpen, setMenuOpen] = useState(false); // State to track menu open/close
-  const [mounted, setMounted] = useState(false); // Track if component is mounted to avoid SSR issues
+  const [menuOpen, setMenuOpen] = useState(false); // Track menu state
+  const [mounted, setMounted] = useState(false); // For SSR
 
   const navLinks = [
-    { label: "Careers", href: "#careers" },
+    { label: "Careers", href: "/careers" },
     { label: "Upskilling", href: "#upskilling" },
     { label: "Consultancy", href: "#consultancy" },
     { label: "Forum", href: "#forum" },
@@ -55,7 +55,7 @@ const Navbar: React.FC = () => {
                 <a
                   href={link.href}
                   className="block text-gray-700 font-semibold hover:text-purple-600 transition-colors duration-300"
-                  onClick={() => setMenuOpen(false)} // Close the menu when a link is clicked
+                  onClick={() => setMenuOpen(false)} // Close menu on click
                 >
                   {link.label}
                 </a>
@@ -65,7 +65,7 @@ const Navbar: React.FC = () => {
         </motion.div>
       )}
 
-      {/* Desktop navigation links */}
+      {/* Desktop menu */}
       <div className="hidden sm:block">
         <ul className="flex space-x-6">
           {navLinks.map((link) => (
