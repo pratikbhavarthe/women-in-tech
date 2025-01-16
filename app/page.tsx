@@ -5,6 +5,7 @@ import AboutUs from "./components/AboutUs";
 import OurMission from "./components/OurMission";
 import OurServices from "./components/OurServices";
 import Footer from "./components/Footer";
+import Vision from "./components/Vision";
 
 export default function Home() {
     return (
@@ -12,6 +13,7 @@ export default function Home() {
             {/* Navbar */}
             <Navbar />
             <Hero />
+            <Vision />
             <AboutUs />
             <OurMission />
             <JoinOurCommunity />
