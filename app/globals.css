@@ -70,3 +70,32 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+
+/* globals.css */
+
+/* Font for descriptions and general purpose */
+@font-face {
+  font-family: 'LobenVariableTrial';
+  src: url('/fonts/LobenVariableTrial-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Font for titles */
+@font-face {
+  font-family: 'PPNeueCorp-CompactMedium';
+  src: url('/fonts/LobenVariableTrial-Bold.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Apply Loben font globally for descriptions and general purpose text */
+body {
+  font-family: 'LobenVariableTrial', sans-serif;
+}
+
+/* Apply PPNeueCorp font to titles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'PPNeueCorp-CompactMedium', sans-serif;
+}
