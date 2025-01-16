@@ -7,7 +7,7 @@ const Hero: React.FC = () => {
             {/* Hero Image */}
             <div className="absolute inset-0">
                 <Image
-                    src="/womengroup.jpeg" // Replace with your hero image path
+                    src="/womenbg10.jpeg" // Replace with your hero image path
                     alt="Hero background"
                     layout="fill" // Ensures the image spans the entire container
                     objectFit="cover" // Maintains aspect ratio while covering the area
