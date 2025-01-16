@@ -15,11 +15,11 @@ const Hero: React.FC = () => {
                 />
             </div>
             {/* Text Overlay */}
-            <div className="absolute bottom-10 right-10 text-white p-6 max-w-md">
+            <div className="absolute bottom-10 left-10 text-white p-6 max-w-md">
                 <h1 className="text-4xl font-bold mb-4">
                     Empowering Women in Technology
                 </h1>
-                <p className="text-lg">
+                <p className="text-lg text-purple-200">
                     Join our community of talented women transforming the tech
                     industry.
                 </p>
