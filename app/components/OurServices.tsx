@@ -2,7 +2,6 @@
 import React from "react";
 import Image from "next/image"; // Importing Image from Next.js
 import { FaRegHandshake, FaChalkboardTeacher, FaBriefcase, FaUsers, FaPlus } from 'react-icons/fa';
-import { cn } from "@/lib/utils";
 
 // Function to render the OurServices component
 const OurServices = () => {

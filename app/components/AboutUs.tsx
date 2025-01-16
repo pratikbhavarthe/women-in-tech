@@ -1,6 +1,5 @@
 // components/AboutUs.tsx
 import Image from 'next/image';
-import { InteractiveHoverButton } from '../../components/ui/interactive-hover-button'; // Import your InteractiveHoverButton component
 
 const AboutUs = () => {
   return (
