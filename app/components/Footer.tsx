@@ -103,7 +103,7 @@ const Footer = () => {
                 rows={4}
               />
               {/* Adjusted Button Size and Width */}
-              <InteractiveHoverButton className="py-2 px-6 rounded-full hover:bg-purple-700 transition duration-300 max-w-max">
+              <InteractiveHoverButton className="text-black py-2 px-6 rounded-full hover:bg-purple-700 transition duration-300 max-w-max">
                 Send
               </InteractiveHoverButton>
             </form>

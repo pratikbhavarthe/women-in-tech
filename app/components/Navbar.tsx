@@ -11,8 +11,8 @@ const Navbar: React.FC = () => {
 
   const navLinks = [
     { label: "Careers", href: "/careers" },
-    { label: "Upskilling", href: "#upskilling" },
-    { label: "Consultancy", href: "#consultancy" },
+    { label: "Upskilling", href: "/upskilling" },
+    { label: "Consultancy", href: "/consulting" },
     { label: "Forum", href: "#forum" },
   ];
 
@@ -24,7 +24,13 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className="relative flex items-center justify-between px-6 py-4 bg-purple-600 text-white">
-      <div className="text-xl font-bold">Women in Tech Community</div>
+      {/* Logo or title that redirects to the home page */}
+      <a
+        href="/"
+        className="text-xl font-bold hover:text-[#3c096c] transition-colors duration-300"
+      >
+        Women in Tech Community
+      </a>
 
       {/* Hamburger icon for mobile view */}
       <div className="sm:hidden">
