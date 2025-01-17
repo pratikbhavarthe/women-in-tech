@@ -21,9 +21,6 @@ interface TextAnimateProps extends MotionProps {
   children: string;
   className?: string;
   segmentClassName?: string;
-  delay?: number;
-  duration?: number;
-  variants?: Variants;
   as?: ElementType;
   by?: AnimationType;
   startOnView?: boolean;
@@ -72,14 +69,13 @@ const defaultItemAnimationVariants: Record<
     container: defaultContainerVariants,
     item: {
       hidden: { opacity: 0, y: 20 },
-      show: (delay: number) => ({
+      show: {
         opacity: 1,
         y: 0,
         transition: {
-          delay,
           duration: 0.3,
         },
-      }),
+      },
       exit: {
         opacity: 0,
         y: 20,
@@ -127,9 +123,6 @@ const defaultItemAnimationVariants: Record<
 
 export function TextAnimate({
   children,
-  delay = 0,
-  duration = 0.3,
-  variants,
   className,
   segmentClassName,
   as: Component = "p",
